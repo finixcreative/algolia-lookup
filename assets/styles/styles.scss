@@ -1,0 +1,156 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+
+/* Fonts */
+$font: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+
+/* Colors */
+$primary: #f52;
+$secondary: #f93;
+$light: #fff;
+$pale: #f3f3f3;
+$dark: #444;
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	background: $dark;
+	background-image: url("../../images/thumbnails/telescope-bg.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	color: $light;
+	margin: 0px;
+}
+body, button {
+	font-family: $font;
+}
+
+/* SIZES */
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: 300;
+	line-height: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	line-height: 2em;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 2.4em;
+}
+h2 {
+	font-size: 2.0em;
+}
+h3 {
+	font-size: 1.6em;
+}
+h4 {
+	font-size: 1.2em;
+}
+h5 {
+	font-size: 1.0em;
+}
+h6 {
+	font-size: 0.6em;
+}
+p {
+	margin: 1em 0;
+	font-size: 20px;
+}
+img {
+	&#logo {
+		width: 100%;
+		max-width: 200px;
+	}
+}
+input,
+select,
+button {
+	height: 40px;
+	padding: 10px;
+	border: none;
+	&:focus {
+		outline: none;		
+	}
+}
+input[type=search] {
+	background-image: url("/assets/images/thumbnails/search-icon.png");
+	background-color: $pale;
+	background-size: 34px;
+	background-position: 3px center;
+	background-repeat: no-repeat;
+	width: calc(100% - 6px);
+	max-width: 400px;
+	padding: 10px 15px 10px 45px;
+	border-radius: 20px;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	&:focus {
+		background-color: $light;
+		width: 100%;
+		max-width: 406px;
+		box-shadow: 1px 0px 2px #000;		
+	}
+}
+.full {
+	width: 100%;
+	float: left;
+}
+.center {
+	text-align: center;
+}
+.overlay {
+	background-color: rgba(0,0,0,0.5);
+}
+.spin {
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	transform: rotate(180deg);
+}
+#search-box {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 100px 20px;
+	text-align: center;
+}
+#search-results {
+	background: #fff;
+	color: #444;
+	.result {
+		padding: 20px;
+		&:hover {
+			background: $pale;
+		}
+		.thumbnail {
+			width: 60px;
+			height: auto;
+			margin-right: 20px;
+			float: left;
+		}
+		.title {
+			width: calc(80% - 80px);
+			float: left;
+		}
+		.order {
+			width: 20%;
+			float: right;
+			button {
+				background-color: $primary;
+				color: $light;
+				width: 100%;
+				border-radius: 3px;
+				font-size: 1em;
+				font-weight: 700;
+				text-transform: uppercase;
+				&:hover {
+					background-color: $secondary;
+				}
+			}
+		}
+	}
+}
